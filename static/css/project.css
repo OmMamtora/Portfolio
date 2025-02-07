@@ -1,0 +1,49 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styles for each project item */
+.col-6 {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.col-6:hover {
+    transform: translateY(-10px);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Make sure images are responsive and centered */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add a responsive grid */
+@media (max-width: 768px) {
+    .col-6 {
+        font-size: 15px;
+        max-width: 100%;
+        padding: 10px;
+        transform: scale(1.0);
+    }
+}

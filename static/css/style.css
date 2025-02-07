@@ -1,0 +1,37 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(20, 0, 30);
+}
+
+/* Navbar */
+.navbar-dark {
+    background-color: rgb(18, 1, 46);
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #4fffb0;
+    text-decoration: 2px underline;
+}
+
+.navbar-nav .nav-link {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    padding-right: 300px;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        padding-right: 0;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<div class="row my-2">
+    <div class="col-4 text-center my-5 text-light">
+        <h1 class="mt-5">Stay connected </h1>
+        <h3 class="mt-5"> ommamtora9@gmail.com</h3>
+
+        <div class="col-12 text-center mt-3 d-flex justify-content-center align-items-center mt-5">
+            <a href="https://www.linkedin.com/in/om-mamtora-a81044226/" target="_blank" class="ms-3">
+                <img src="{% static 'images/linkedin.png' %}" alt="Loading" width="40" height="40" class="social-links">
+            </a>
+            <a href="https://github.com/OmMamtora" target="_blank" class="ms-3">
+                <img src="{% static 'images/github.png' %}" alt="Loading" width="40" height="40" class="social-links">
+            </a>
+        </div>
+    </div>
+
+    <div class="col-5 offset-1 mt-3">
+        <div class="form-container">
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success text-center" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="phoneNo" class="form-label">Phone No</label>
+                    <input type="tel" class="form-control" id="phoneNo" name="phoneNo">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea name="message" class="form-control" id="message" rows="5"></textarea>
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>            
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content1%}

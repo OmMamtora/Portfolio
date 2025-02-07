@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<div id="about" class="row my-5">
+    <div class="col-4 d-flex justify-content-center align-items-center">
+        <img src="{% static 'images/Om.png' %}" alt="Loading" class="about_image">
+    </div>
+    <div class="col-7 text-left text-light">
+        <h2>Hello!</h2>
+        <p class="fs-5">
+            I’m Om Mamtora, a Bachelor of Computer Application graduate from Indus University
+             with a solid background in web development and programming. I am deeply 
+             passionate about designing user-friendly and efficient web applications.
+        </p>
+        <p class="fs-5">
+            Proficient in Python, Django, HTML, CSS, Java, PHP, and SQL, I am driven by a 
+            desire to learn, grow, and embrace new challenges. I aim to contribute to 
+            meaningful projects while continuously honing my skills. Let’s collaborate 
+            and create something exceptional!
+        </p>
+    </div>
+</div>  
+
+    <div class="row my-2">
+        <h2 class="text-center" style="color: #4fffb0; margin-top: -10px;">My Tech Stack</h2>
+        <div class="skills-box d-flex justify-content-around align-items-center mt-2">
+            <img src="{% static 'images/python.jpg' %}" alt="Python" width="70" height="70" class="img-fluid">     
+            <img src="{% static 'images/django.png' %}" alt="Django" width="70" height="70" class="img-fluid">
+            <img src="{% static 'images/htmlCssJS.png' %}" alt="HTML CSS JS" width="70" height="70" class="img-fluid">
+            <img src="{% static 'images/java.png' %}" alt="Java" width="70" height="70" class="img-fluid">
+            <img src="{% static 'images/php.png' %}" alt="Php" width="70" height="70" class="img-fluid">
+            <img src="{% static 'images/sql.png' %}" alt="SQL" width="70" height="70" class="img-fluid">
+            <img src="{% static 'images/c.png' %}" alt="C" width="70" height="70" class="img-fluid">
+            <img src="{% static 'images/cpp.png' %}" alt="C++" width="70" height="70" class="img-fluid">
+        </div>
+        
+    </div>
+    {% endblock content1 %}
+
+    
+    

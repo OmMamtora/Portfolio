@@ -1,0 +1,80 @@
+.body{
+    background-color: rgb(20,0,30);
+}
+
+.circular-image-container{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image{
+    width: auto;
+    height:120%;
+    display: block;
+}
+
+.name{
+    color: white;
+}
+.title{
+    color: #4fffb0;
+}
+
+.social-links{
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* from here is ContactUs CSS */
+
+.form-container{
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Form Fields */
+.form-control {
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .col-4, .col-5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+    }
+}

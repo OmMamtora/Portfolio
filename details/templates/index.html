@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<div id="home" class="row my-5">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+        <div class="circular-image-container">
+            <img class="circular-image" src="{% static 'images/Om.png' %}" alt="Loading">
+        </div>
+    </div>
+    <div class="col-12 text-center mt-3">
+        <h4 class="title">Hi, I'm  </h4>
+        <div class="name">
+            <h1> Om Mamtora </h1>
+            <h1> Web Developer</h1>
+        </div>
+    </div>        
+    <div class="col-12 text-center mt-3 d-flex justify-content-center align-items-center">
+        <a href="https://www.linkedin.com/in/om-mamtora-a81044226/" target="_blank" class="ms-3">
+            <img src="{% static 'images/linkedin.png' %}" alt="Loading" width="40" height="40" class="social-links">
+        </a>
+        <a href="https://github.com/OmMamtora" target="_blank" class="ms-3">
+            <img src="{% static 'images/github.png' %}" alt="Loading" width="40" height="40" class="social-links">
+        </a>
+    </div>
+</div>   
+{% endblock content1 %}
