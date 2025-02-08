@@ -32,7 +32,7 @@ def projects(request):
         },
         {
             "title":"Hospital Management System",
-            "path":"images/Project_Images/HMS_AboutUs.png",
+            "path":"images/Project_Images/HMS_AboutUs.PNG",
             "github_link":"https://github.com/OmMamtora/Projects/tree/main/Hospital%20Management%20System"
         },
         {
