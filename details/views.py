@@ -64,12 +64,13 @@ def contact(request):
     return render(request, 'contact.html')
 
 def resume(request):
-    resume_path ="myResume/Resume(Om).pdf"
-    resume_path = staticfiles_storage.path(resume_path)
-    if staticfiles_storage.exists(resume_path):
-        with open(resume_path,"rb") as resume_file:
-            response = HttpResponse(resume_file.read(),content_type="application/pdf")
-            response['Content-Disposition'] = 'attachment';filename="Resume(Om).pdf"
+    # Path to the resume file inside the static folder
+    resume_path = os.path.join(settings.BASE_DIR, 'static', 'myResume', 'Resume(Om).pdf')
+    
+    if os.path.exists(resume_path):
+        with open(resume_path, "rb") as resume_file:
+            response = HttpResponse(resume_file.read(), content_type="application/pdf")
+            response['Content-Disposition'] = 'attachment; filename="Resume(Om).pdf"'
             return response
     else:
-        return HttpResponse("Resume Not Found..",status = 404)
+        return HttpResponse("Resume Not Found..", status=404)
