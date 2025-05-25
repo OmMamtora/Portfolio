@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+
+<link rel="stylesheet" href="{% static 'css/certificates.css' %}">
+
+<div class="cert-section">
+    <h2>My Certificates</h2>
+
+    <div class="row my-2">
+        <div class="col-4">
+            <ul>
+                {% for cert in certificate_Show %}
+                <li><a href="?show={{ cert.id }}">{{ cert.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Selected Certificate Image -->
+        <div class="col-8">
+            {% if selected_cert %}
+                <h4>{{ selected_cert.title }}</h4>
+                <img src="{% static selected_cert.path %}" alt="{{ selected_cert.title }}" width="500" height="600" class="img-fluid">
+            
+            {% else %}
+                <p>Select a certificate to view it here.</p>
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+{% endblock content1 %}
