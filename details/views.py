@@ -43,6 +43,44 @@ def projects(request):
     ]
     return render(request,"projects.html",{"projects_show" : projects_show})
 
+def certificates(request):
+    certificate_Show = [
+        {
+            "id": "1",
+            "title": "SQL and SQL for Data Analysis",
+            "path": "images/Certificates_Images/SQL.jpg"
+        },
+        {
+            "id": "2",
+            "title": "Power BI Certificate",
+            "path": "images/Certificates_Images/Power BI.jpg"
+        },
+        {
+            "id": "3",
+            "title": "Python BootCamp Certificate",
+            "path": "images/Certificates_Images/Python BootCamp.jpg"
+        },
+        {
+            "id": "4",
+            "title": "Java Bootcamp Certificate",
+            "path": "images/Certificates_Images/Java BootCamp.jpg"
+        }
+    ]
+
+    selected_id = request.GET.get("show")
+    selected_cert = next((cert for cert in certificate_Show if cert["id"] == selected_id), None)
+
+    # Default to SQL certificate if none selected
+    if not selected_cert:
+        selected_cert = next((cert for cert in certificate_Show if "SQL" in cert["title"]), None)
+
+
+    return render(request, "certificates.html", {
+        "certificate_Show": certificate_Show,
+        "selected_cert": selected_cert,
+    })
+
+
 def contact(request):
     if request.method == "POST":
         name = request.POST.get('name')
